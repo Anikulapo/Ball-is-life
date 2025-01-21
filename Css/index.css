@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+
+}
+/* Nav bar Styling */
+.close{
+    display: none;
+    width: 14%;
+    background-color: transparent;
+    color: white;
+}
+.menu{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+.special{
+    font-family: "Playwrite VN";
+    font-size: 20px;
+    display: inline-block;
+    width: 20%;
+}
+header{
+    position: relative;
+    top: 2%;
+    z-index: 100;
+}
+#logo{
+    
+    height: 2%;
+    width: 5%;
+    margin-right: 6px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 19px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 5px 60px;
+
+}
+.btn4{
+    margin-left: 120px;
+    padding: 10px 30px;
+    border-radius: 7px;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    transition: 0.8s;
+}
+.btn4:hover{
+    box-shadow: 5px 5px black ;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+.navigate a{
+    text-decoration: none;
+    color: #393939;
+}
+.navigate a:hover{
+    color: black;
+}
+.page1{
+    background-image: url(../images/cooking.jpg);
+    width: 100%;
+    height: 730px;
+    position: relative;
+}
+.page1::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:100%;
+    width: 100%;
+    bottom: .8px;
+    opacity: .7;
+    z-index: 0;
+}
+#on::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:2.5px;
+    top: 18.8px;
+    right: .7px;
+    width: 100%;
+    color: black;
+    transition: none;
+}
+.navigate a{
+    position: relative;
+}
+.links::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:2.5px;
+    top: 19px;
+    left: 0;
+    width: 0;
+    transition: 0.8s;
+}
+.links:hover:after{
+    width: 100%;
+}
+.cart{
+    width: 2%;
+    position: relative;
+    left: 10%;
+}
+.links{
+    padding: 0 20px;
+}
+
+
+/* beginning */
+.page1_text{
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-top: 15%;
+    margin-left: 3%;
+}
+.opening h1{
+    font-size: 90px;
+}
+.opening p{
+    font-size: 35px;
+}
+.opening{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drive{
+    text-decoration: none;
+    background-color: skyblue;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 15px 100px;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+.drive:hover{
+    box-shadow: 5px 5px ;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+
+/* section2 */
+.container2{
+    margin-top: 11%;
+    margin-left: 20%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.btn2{
+    background-color: gold;
+    padding: 20px 65px;
+    border-radius: 7px;
+    margin-top: 12px;
+    position: relative;
+    top: 100px;
+    left: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+
+}
+.btn2:hover{
+    background-color: purple;
+    color: gold;
+}
+.shop{
+    color: purple;
+}
+.kob{
+    width: 550px;
+    height: 500px;
+    position: relative;
+    bottom: 50px;
+}
+.shop h1{
+    font-size: 80px;
+}
+
+
+/* 
+Section 3 */
+.container3{
+    margin-top: 13%;
+    margin-left: 20%;
+    margin-right: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.page3{
+    background-image: url(../images/Curry.jpg);
+    width: 100%;
+    height: 735px;
+}
+.about{
+    margin-top: 30%;
+    font-size: 50px;
+    color: white;
+}
+.btn3{
+    background-color: orange;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    top: 30%;
+    padding: 5px 40px;
+    transition: 0.3s;
+}
+.btn3:hover{
+    box-shadow: 7px 7px rgb(251, 249, 249,0.3); 
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* * Media Queries */ 
+/* Add responsiveness for small devices */
+@media screen and (max-width: 1272px) {
+
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #logo {
+        width: 10%; /* Make logo smaller */
+        height: auto;
+    }
+
+    .navigate{
+        position: fixed;
+        left: -500%;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 6rem 3.5rem 4.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: left .4s;
+        color: white;
+        z-index: 2000;
+    }
+
+
+    .navigate a {
+        font-size: 20px;
+        margin: 20px 0;
+        color: white;
+    }
+
+    .links::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        height:2.5px;
+        top: 19px;
+        left: 0;
+        width: 0;
+        transition: 0.8s;
+    }
+    .navigate a:hover{
+        color: white;
+    }
+    .links:hover:after{
+        width: 29%;
+    }
+    #on::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        height:2.5px;
+        top: 18.8px;
+        right: .7px;
+        width: 30%;
+        transition: none;
+    }
+
+    .btn4 {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .special{
+        font-family: "Playwrite VN";
+        font-size: 20px;
+        display: inline-block;
+        width: 80%;
+    }
+    #logo{
+    
+        height: 10%;
+        width: 15%;
+        margin-right: 6px;
+    }
+    .menu{
+        display: inline-block;
+        width: 7%;
+        position: relative;
+        right: 0;
+    }
+    .menu:hover{
+        cursor: pointer;
+    }
+    .close{
+        display: inline-block;
+        width: 14%;
+        background-color: transparent;
+        color: white;
+    }
+    .show-menu{
+        left: 0%;
+        color: white;
+    }
+    .btn4{
+        position: relative;
+        display: inline;
+        left: -30%;
+    }
+    .close:hover{
+        cursor: pointer;
+    }
+    .full{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hide-btn{
+        display: none;
+    }
+
+    /* Page content adjustments */
+    .page1_text {
+        margin: 20% auto;
+        text-align: center;
+    }
+
+    .opening h1 {
+        font-size: 50px;
+    }
+
+    .opening p {
+        font-size: 20px;
+    }
+
+    .container2, .container3 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .kob {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        z-index: -1;
+    }
+
+    .btn2, .btn3 {
+        padding: 10px 30px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+

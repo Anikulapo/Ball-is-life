@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+
+}
+/* Nav bar Styling */
+.close{
+    display: none;
+    width: 14%;
+    background-color: transparent;
+    color: white;
+}
+.menu{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+.special{
+    font-family: "Playwrite VN";
+    font-size: 20px;
+    display: inline-block;
+    width: 20%;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+#logo{
+    height: 2%;
+    width: 5%;
+    margin-right: 6px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 19px;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid;
+    position: fixed;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+.navigate a{
+    text-decoration: none;
+    color: #393939;
+}
+.navigate a:hover{
+    color: black;
+}
+#on::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:2.5px;
+    top: 18.8px;
+    right: .7px;
+    width: 100%;
+    color: black;
+    transition: none;
+}
+.navigate a{
+    position: relative;
+}
+.links::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:2.5px;
+    top: 19px;
+    left: 0;
+    width: 0;
+    transition: 0.8s;
+}
+.links:hover:after{
+    width: 100%;
+}
+.cart{
+    width: 30%;
+    position: relative;
+    left: 10%;
+}
+.links{
+    padding: 0 20px;
+}
+.links:hover{
+    cursor: pointer;
+}
+.cart-item {
+    position: absolute;
+    right: -30%; 
+    top: 35%;   
+    display: flex;
+    align-items: center;
+    gap: 5px;  
+}
+
+#top {
+    width: 4%;
+    height: auto;
+    cursor: pointer;
+}
+
+.cart:hover{
+    cursor: pointer;
+}
+.cart-item-count{
+    position: absolute;
+    bottom: 10px;
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    background: orange;
+    border-radius: 50%;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+
+/* beginning */
+.add-cart{
+    width: 10%;
+    position: relative;
+    top: 10px;
+}
+.shop{
+    padding: 100px 9% 30px;
+}
+.section-title{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px;
+}
+.img-box{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.img-box img{
+    width: 100%;
+    transition: 0.5s ease;
+}
+.img-box:hover img{
+    transform: scale(1.2);
+}
+.product-title{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.price-and-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price{
+    font-size: 18px;
+    font-weight: 500;
+}
+.add-cart{
+    padding: 10px;
+    background: orange;
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: -30px;
+    top: -2px;
+}
+
+
+
+
+
+/* cart */
+.cart1{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 65px 20px 40px;
+    z-index: 100;
+    overflow: auto;
+    transition: 0.5s ease-in-out;
+}
+.cart1.active{
+    right: 0;
+}
+.cart-tittle{
+    text-align: center;
+    font-size: 30px;
+
+}
+.cart-box{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.prod{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.cart-detail{
+    display: grid;
+    gap:8px;
+    margin-right: auto; 
+}
+.cart-product-title{
+    font-size: 16px;
+    line-height: 1;
+}
+
+.cart-price{
+    font-weight: 500;
+}
+#cart-close,
+.cart-remove{
+    width: 10%;
+    position: relative;
+    top: 12px;
+}
+.cart-quantity{
+    display: flex;
+    width: 100px;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+.cart-quantity button{
+    background: transparent;
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+#decrement{
+    color: #999;
+}
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    cursor: default;
+}
+.cart-remove{
+    font-size: 25px;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.total-price{
+    margin-left: 10px;
+    font-weight: 600;
+}
+.btn-buy{
+    display: block;
+    padding: 10px 30px;
+    background-color: orange;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: white;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+#cart-close{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+    .product-content{
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    }
+    .cart{
+        width: 20%;
+    }
+    .logo {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #logo {
+        width: 10%;
+        height: auto;
+    }
+
+    .navigate{
+        position: fixed;
+        left: -500%;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 6rem 3.5rem 4.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: left .4s;
+        color: white;
+        z-index: 2000;
+    }
+
+
+    .navigate a {
+        font-size: 20px;
+        margin: 20px 0;
+        color: white;
+    }
+
+    .links::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        height:2.5px;
+        top: 19px;
+        left: 0;
+        width: 0;
+        transition: 0.8s;
+    }
+    .navigate a:hover{
+        color: white;
+    }
+    .links:hover:after{
+        width: 29%;
+    }
+    #on::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        height:2.5px;
+        top: 18.8px;
+        right: .7px;
+        width: 30%;
+        transition: none;
+    }
+
+    .btn4 {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .special{
+        font-family: "Playwrite VN";
+        font-size: 20px;
+        display: inline-block;
+        width: 80%;
+    }
+    #logo{
+    
+        height: 10%;
+        width: 15%;
+        margin-right: 6px;
+    }
+    .menu{
+        display: inline-block;
+        width: 7%;
+        position: relative;
+        right: 0;
+    }
+    .menu:hover{
+        cursor: pointer;
+    }
+    .close{
+        display: inline-block;
+        width: 14%;
+        background-color: transparent;
+        color: white;
+    }
+    .show-menu{
+        left: 0%;
+        color: white;
+    }
+    .close:hover{
+        cursor: pointer;
+    }
+    .full{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cart-item {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    .cart-item {
+        right: 15%; /* Adjust for visibility */
+        top: 23%;   /* Align it correctly */
+    }
+
+    #top {
+        width: 60%; /* Slightly larger for touchscreens */
+    }
+    
+}
+

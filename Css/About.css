@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+
+}
+/* Nav bar Styling */
+a{
+    text-decoration: none;
+}
+.special{
+    font-family: "Playwrite VN";
+    font-size: 20px;
+    display: inline-block;
+    width: 20%;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+#logo{
+    
+    height: 2%;
+    width: 5%;
+    margin-right: 6px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 19px;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid;
+    position: fixed;
+}
+.btn4{
+    margin-left: 120px;
+    padding: 10px 30px;
+    border-radius: 7px;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    transition: 0.8s;
+}
+.btn4:hover{
+    box-shadow: 5px 5px black ;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+.navigate a{
+    text-decoration: none;
+    color: #393939;
+}
+.navigate a:hover{
+    color: black;
+}
+#on::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:2.5px;
+    top: 18.8px;
+    right: .7px;
+    width: 100%;
+    color: black;
+    transition: none;
+}
+.navigate a{
+    position: relative;
+}
+.links::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height:2.5px;
+    top: 19px;
+    left: 0;
+    width: 0;
+    transition: 0.8s;
+}
+.links:hover:after{
+    width: 100%;
+}
+.cart{
+    width: 2%;
+    position: relative;
+    left: 7%;
+}
+.links{
+    padding: 0 20px;
+}
+.menu{
+    display: none;
+}
+.close{
+    display: none;
+}
+
+
+/* beginning */
+.pro{
+    border-radius: 50%;
+    width: 20%;
+    margin-left: 20%;
+    align-items: center;
+}
+.container{
+    margin-top: 15%;
+    margin-left: 30%;
+}
+.text h1{
+    font-size: 50px;
+}
+
+
+
+
+/* page1 */
+.page1{
+    margin-top: 15%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+}
+.full{
+    width: 70%;
+    border-radius: 9px;
+}
+.about{
+    border-left: 2px solid;
+    position: relative;
+    right: 10%;
+}
+.about h1{
+    font-size: 50px;
+}
+.about p{
+    font-size: 20px;
+}
+
+
+
+/* media quary */
+@media screen and (max-width: 1272px) {
+    .navigate{
+        position: fixed;
+        left: -500%;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        padding: 6rem 3.5rem 4.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: left .4s;
+        color: white;
+    }
+
+    .text h1{
+    font-size: 40px;
+}
+    .pro{
+        width: 30%;
+    }
+    .page1 {
+        margin-top: 40%;
+        grid-template-columns: 1fr;
+    }
+    .links{
+        color: white;
+    }
+    .links::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        height:2.5px;
+        top: 19px;
+        left: 0;
+        width: 0;
+        transition: 0.8s;
+    }
+    .navigate a:hover{
+        color: white;
+    }
+    .links:hover:after{
+        width: 22%;
+    }
+    #on::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        height:2.5px;
+        top: 18.8px;
+        right: .7px;
+        width: 30%;
+        transition: none;
+    }
+    .about{
+        display:flex;
+        flex-direction: column;
+    }
+    .special{
+        font-family: "Playwrite VN";
+        font-size: 20px;
+        display: inline-block;
+        width: 80%;
+    }
+    #logo{
+    
+        height: 10%;
+        width: 15%;
+        margin-right: 6px;
+    }
+    .menu{
+        display: inline-block;
+        width: 7%;
+        position: relative;
+        right: 0;
+    }
+    .menu:hover{
+        cursor: pointer;
+    }
+    .close{
+        display: inline-block;
+        width: 14%;
+        background-color: transparent;
+        color: white;
+    }
+    .show-menu{
+        left: 0%;
+        color: white;
+    }
+    .btn4{
+        position: relative;
+        display: inline;
+        left: -30%;
+    }
+    .close:hover{
+        cursor: pointer;
+    }
+    .full{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hide-btn{
+        display: none;
+    }
+}
