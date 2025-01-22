@@ -433,12 +433,12 @@ ul{
     }
 
     .cart-item {
-        right: 15%; /* Adjust for visibility */
-        top: 23%;   /* Align it correctly */
+        right: 15%;
+        top: 23%;
     }
 
     #top {
-        width: 60%; /* Slightly larger for touchscreens */
+        width: 60%; 
     }
     
 }
